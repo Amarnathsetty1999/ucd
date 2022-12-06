@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo=new PDO("mysql:host=localhost;dbname=wta","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
 
 $tot=0;
 $cnt=0;

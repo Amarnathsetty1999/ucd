@@ -2,7 +2,7 @@
 session_start();
 date_default_timezone_set("Asia/Calcutta");
 $email=$_POST['email'];
-$pdo=new PDO("mysql:host=localhost;dbname=wta","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
 
 $tot=0;
 

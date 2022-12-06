@@ -1,6 +1,6 @@
 <?php
 $email=$_POST['email'];
-$pdo=new PDO("mysql:host=localhost;dbname=wta","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
 $result=$pdo->query("select * from users where email='$email'"); 
 
 if(($row=$result->fetch()))
@@ -26,7 +26,7 @@ if(($row=$result->fetch()))
 END;
 }
 $pdo=null;
-$pdo=new PDO("mysql:host=localhost;dbname=wta","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
 $result=$pdo->query("select * from orders where email='$email' order by dt desc");
 $n=0;
 while(($row=$result->fetch()))
