@@ -92,8 +92,8 @@ while(($row=$result->fetch()))
 <!-- Portfolio Gallery Grid -->
 
    <div class="col-md-4">
-    <div class="thumbnail">
-      <img src="$path" class="img-thumbnail" alt="Mountains" style="width:100%">
+    <div class="card">
+      <img src="$path"  alt="Mountains" width="300" height="300" >
       <p><strong>Name: </strong> $pname </p>
       <a class="ad" data-toggle="modal" data-target="#myModal" onclick="f($pid)"><strong>Description</strong></a>
 
@@ -116,11 +116,12 @@ while(($row=$result->fetch()))
 
   </div>
 </div>
-      <p><strong> Cost: </strong>&#8377; $cost </p>
+      <p><strong> Cost: </strong>&#163; $cost </p>
       <div><button class=bb type=button id=$pid> Buy </button>
       <button class=ss type=button id="p$pid"> Add to Cart </button>
       <button class=rm type=button id="p$pid"> Remove from Cart </button></div>
     </div>
+    <br>
   </div>
   
 

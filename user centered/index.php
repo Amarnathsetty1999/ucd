@@ -147,7 +147,6 @@ $("#lo").click(function()
   
 </div>
 
-
 <div id="me">
 <div id="rec"><?php include('home.html'); ?></div>
 <div class="about-section" id="abt">
