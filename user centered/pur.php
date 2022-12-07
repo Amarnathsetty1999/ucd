@@ -2,10 +2,10 @@
 
 session_start();
 
-if($_SESSION['status']!="Active")
-{
-    header("location:login.html");
-}
+// if($_SESSION['status']!="Active")
+// {
+//     header("location:login.html");
+// }
 
 ?>
 <!DOCTYPE html>
@@ -116,11 +116,11 @@ $("#about").click(function()
 $("#lo").click(function()
 {
   email=getCookie('email');
-
+   eraseCookie('email');
   $.post( "logout.php", {email:email  }).done(function( data ) 
     { 
       // alert(data);
-       location.replace('login.html');
+       location.replace('index.php');
     });
 });
 
@@ -172,7 +172,16 @@ $("#ck").click(function()
   
     <a href="#" id="lo">Logout</a>
   
-     <a href="#" id="about">My Account</a>
+     <a href="#" id="about"><?php
+  if(array_key_exists('email', $_COOKIE))
+  {
+    echo $_COOKIE['email'];
+  }
+  else
+  {
+    echo "Sign in";
+  }
+  ?></a>
   
   </div>
   

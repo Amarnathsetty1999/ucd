@@ -2,10 +2,10 @@
 
 session_start();
 
-if($_SESSION['status']!="Active")
-{
-    header("location:login.html");
-}
+// if($_SESSION['status']!="Active")
+// {
+//     header("location:login.html");
+// }
 
 ?>
 <!DOCTYPE html>
@@ -101,10 +101,11 @@ $("#ck").click(function()
 $("#lo").click(function()
 {
   email=getCookie('email');
+  eraseCookie('email');
 
   $.post( "logout.php", {email:email }).done(function( data ) 
     { 
-       location.replace('login.html');
+       location.replace('index.php');
     });
 });
 
@@ -114,7 +115,13 @@ $("#lo").click(function()
 <body>
 
 <div class="navbar navbg" id="nav">
- 
+
+ <div id="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+ <a class="navbar-brand" href="#">
+      <img src="images/trt.png" alt="..." height="36">
+    </a> 
+
+</div> 
   <a class="navbar-brand bgs" href="#" id="title">Online Retail store</a>
 
   <a href="#" id="pur">Purchase</a>
@@ -127,60 +134,28 @@ $("#lo").click(function()
 
   <a href="#" id="lo">Logout</a>
 
-  <a href="#" id="about">My Account</a>
+  <a href="#" id="about"><?php
+  if(array_key_exists('email', $_COOKIE))
+  {
+    echo $_COOKIE['email'];
+  }
+  else
+  {
+    echo "Sign in";
+  }
+  ?></a>
   
 </div>
+
 
 <div id="me">
 <div id="rec"><?php include('home.html'); ?></div>
 <div class="about-section" id="abt">
-  <h1 style='overflow:hidden'>About Us</h1>
-  <p>Online retail store, is an Indian chain of hypermarkets in India founded 
-      by Gowtham and co in the year 2021, with its first branch in shimoga.</p>
+
+ 
+  <p><a href="#" id="pur">Purchase</a></p>
   <!-- <p>Resize the browser window to see that this page is responsive by the way.</p> -->
-</div>
 
-<h2 style="text-align:center; margin-top:20px;overflow:hidden">Our Team</h2>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <!-- <img src="/w3images/team1.jpg" alt="Jane" style="width:100%"> -->
-      <div class="container">
-        <h2 style='overflow:hidden'>Gowtham S</h2>
-        <p class="title">CEO & Founder</p>
-        <p>7338313997</p>
-        <p>gowthamsgs2016@gmail.com</p>
-        <!-- <p><button class="button">Contact</button></p> -->
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card" id="ex">
-      <!-- <img src="/w3images/team2.jpg" alt="Mike" style="width:100%"> -->
-      <div class="container">
-        <h2 style='overflow:hidden'>Subhan Shariff</h2>
-        <p class="title"> Co-founder </p>
-        <p>9739671126</p>
-        <p>subhansha063@gmail.com</p>
-        <!-- <p><button class="button">Contact</button></p> -->
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
-      <div class="container">
-        <h2 style='overflow:hidden'>Bharath K G</h2>
-        <p class="title">Developer</p>
-        <p> 8618415646</p>
-        <p>bharathkg99@gmail.com</p>
-        <!-- <p><button class="button">Contact</button></p> -->
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

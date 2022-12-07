@@ -93,7 +93,7 @@ while(($row=$result->fetch()))
 
    <div class="col-md-4">
     <div class="thumbnail">
-      <img src="$path" alt="Mountains" style="width:100%">
+      <img src="$path" class="img-thumbnail" alt="Mountains" style="width:100%">
       <p><strong>Name: </strong> $pname </p>
       <a class="ad" data-toggle="modal" data-target="#myModal" onclick="f($pid)"><strong>Description</strong></a>
 

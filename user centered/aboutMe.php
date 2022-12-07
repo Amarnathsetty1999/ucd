@@ -1,5 +1,13 @@
+
 <?php
 $email=$_POST['email'];
+if(!array_key_exists('email', $_COOKIE))
+  {
+    header("location:login.html");
+  }
+
+
+
 $pdo=new PDO("mysql:host=localhost;dbname=test","root","");
 $result=$pdo->query("select * from users where email='$email'"); 
 
@@ -9,7 +17,7 @@ if(($row=$result->fetch()))
     $pno=$row['phone'];
     // $addr=$row['adrs'];
     echo <<<END
-   
+    
     <table class="center detail">
     <tr><td><b>Name : </b></td><td> $name</td><br>
     </tr>
@@ -19,6 +27,11 @@ if(($row=$result->fetch()))
     <tr><td>
     <b>Phone :</b></td><td> $pno</td><br>
     </tr>
+    <tr><td>
+    <b><a href="#" id="lo">Logout</a></td><br>
+    </tr>
+   
+
     </table>
 <br><br>
 </div> 

@@ -2,12 +2,21 @@
 
 session_start();
 
-if($_SESSION['status']!="Active")
-{
-    header("location:login.php");
-}
+// if($_SESSION['status']!="Active")
+// {
+//     echo "Please login in before purchasing";
+//     header("location:login.php");
+// }
 
-date_default_timezone_set("Asia/Calcutta");
+if(!array_key_exists('email', $_COOKIE))
+{
+    echo "Please login before Purchasing" ;
+    
+}
+else
+{
+    
+    date_default_timezone_set("Asia/Calcutta");
 $pid=$_POST['pid'];
 $email=$_POST['email'];
 $qt=1;
@@ -21,4 +30,8 @@ if(($r=$res->fetch()))
 $pdo->query("insert into orders values('$pid','$email','$dt','$qt','$price')");
 $pdo=null;
 echo "Order placed successfully";
+
+}
+
+
 ?>

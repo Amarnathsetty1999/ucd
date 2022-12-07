@@ -24,7 +24,7 @@ else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 else
 {
   $salt = "7sf7a889x".$psw."di9aj2";
-        $hashed = hash('sha512', $salt);
+  $hashed = hash('sha512', $salt);
 $sql="INSERT into users values('$email','$hashed','$name','$pno')";
 $result=$pdo->exec($sql);
 echo "Registered successfully";
