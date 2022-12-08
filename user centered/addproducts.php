@@ -7,6 +7,7 @@ $pname=$_POST['pname'];
 $pdesc=$_POST['pdesc'];
 $cid=$_POST['cid'];
 $price=$_POST['price'];
+$ii=$price;
 $me=$cid;
 
 $pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
@@ -20,12 +21,11 @@ if($pid=='' || $pname=='' || $pdesc==''|| $cid=''|| $price='')
 else
 {
   
-$sql="INSERT into product values('$pid','$pname','$price','$pdesc','$me')";
+$sql="INSERT into product values('$pid','$pname','$ii','$pdesc','$me')";
 $result=$pdo->exec($sql);
 echo "Product added";
 $pdo=null;
 }
 
-header("location:adminindex.php");
 ?>
 

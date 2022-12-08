@@ -41,6 +41,8 @@ $(document).ready(function()  //web page is loaded
    $.post( "addproducts.php", { pid:pid,pname:pname,pdesc:pdesc,cid:cid ,price:price}).done(function( data ) 
   { 
     alert(data);
+    if(data=="Product added");
+        location.replace("adminindex.php");
    
 }); 
 
