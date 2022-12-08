@@ -77,7 +77,7 @@ $("#about").click(function()
 
 <div class="navbar navbg" id="nav">
 
-  <a class="navbar-brand bgs" href="#" id="title">Online charity store</a>
+  <a class="navbar-brand bgs" href="#" id="title"><img src="images/logo02.png" alt="logo" width="250" height="50" /><br>Online charity store</a>
 
 
   <a href="#abt" id="abtus">About us</a>
@@ -103,7 +103,7 @@ $("#about").click(function()
     <div class="col-md-4 p-3  text-white">
     <div class="container-fluid mt-3">
     <div class="card" style="width:350px">
-    <img class="card-img-top" src="images/pic2.jpg" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="images/ucw2.jpg" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -122,7 +122,7 @@ $("#about").click(function()
 
     <div class="container-fluid mt-3">
     <div class="card" style="width:350px">
-    <img class="card-img-top" src="images/pic1.jpg" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="images/ucw9.jpg" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -137,7 +137,7 @@ $("#about").click(function()
     <div class="col-md-4 p-3  text-white">
     <div class="container-fluid mt-3">
     <div class="card" style="width:350px">
-    <img class="card-img-top" src="images/pic3.jpg" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="images/ucw15.jpg" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -151,8 +151,8 @@ $("#about").click(function()
 
 <div class="about-section" id="abt">
   <h1 style='overflow:hidden'>About Us</h1>
-  <p>Online charity store, is operated by opus corporation 
-      by Gowtham and co in the year 2021, with its first branch in shimoga.</p>
+  <p>Online charity store, is operated by opus corporation to raise funds for needy prople across United Kingdom
+      .</p>
   <!-- <p>Resize the browser window to see that this page is responsive by the way.</p> -->
 </div>
 
@@ -162,38 +162,21 @@ $("#about").click(function()
     <div class="card">
       <!-- <img src="/w3images/team1.jpg" alt="Jane" style="width:100%"> -->
       <div class="container">
-        <h2 style='overflow:hidden'>Gowtham S</h2>
-        <p class="title">CEO & Founder</p>
+        <h2 style='overflow:hidden'>Amarnath Gopynath</h2>
+        <p class="title">admin</p>
         <p>7338313997</p>
-        <p>gowthamsgs2016@gmail.com</p>
+        <p>opuscorp.org</p>
         <!-- <p><button class="button">Contact</button></p> -->
       </div>
     </div>
   </div>
 
   <div class="column">
-    <div class="card" id="ex">
-      <!-- <img src="/w3images/team2.jpg" alt="Mike" style="width:100%"> -->
-      <div class="container">
-        <h2 style='overflow:hidden'>Subhan Shariff</h2>
-        <p class="title"> Co-founder </p>
-        <p>9739671126</p>
-        <p>subhansha063@gmail.com</p>
-        <!-- <p><button class="button">Contact</button></p> -->
-      </div>
-    </div>
+  
   </div>
   
   <div class="column">
-    <div class="card">
-      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
-      <div class="container">
-        <h2 style='overflow:hidden'>Bharath K G</h2>
-        <p class="title">Developer</p>
-        <p> 8618415646</p>
-        <p>bharathkg99@gmail.com</p>
-        <!-- <p><button class="button">Contact</button></p> -->
-      </div>
+    
     </div>
   </div>
 </div>

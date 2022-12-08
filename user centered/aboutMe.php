@@ -14,6 +14,7 @@ $result=$pdo->query("select * from users where email='$email'");
 if(($row=$result->fetch()))
 {
     $name=$row['name'];
+    $pno=$row['phone'];
 
     // $addr=$row['adrs'];
     echo <<<END

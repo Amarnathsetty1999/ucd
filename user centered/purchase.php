@@ -16,7 +16,7 @@ if(!array_key_exists('email', $_COOKIE))
 else
 {
 
-    date_default_timezone_set("Asia/Calcutta");
+    date_default_timezone_set("Europe/London");
 $pid=$_POST['pid'];
 $email=$_POST['email'];
 $qt=1;

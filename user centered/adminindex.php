@@ -98,10 +98,10 @@ $("#lo").click(function()
 
 <div class="navbar navbg" id="nav">
  
-  <a class="navbar-brand bgs" href="#" id="title">Mellodian Community Park </a>
+  <a class="navbar-brand bgs" href="#" id="title">Online charity store </a>
 
   <a href="#" id="order">ALL ORDERS</a>
-  <a href="#" id="user">ALL USER</a>
+  <a href="#" id="user">ALL Customers</a>
   <a href="#" id="lo">Logout</a>
   
 </div>
