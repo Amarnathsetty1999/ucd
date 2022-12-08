@@ -66,7 +66,7 @@ $.post( "getName.php", { email:$email }).done(function( data )
   
 });
 
-$.post( "show.php", {cat:"dairy"  }).done(function( data ) 
+$.post( "show.php", {cat:"Charity"  }).done(function( data ) 
 { 
       $("#imp").html(data);
      
@@ -161,7 +161,7 @@ $("#ck").click(function()
   
   <div class="navbar navbg" id="nav">
  
-    <a class="navbar-brand bgs" href="#" id="title">Online Retail store</a>
+    <a class="navbar-brand bgs" href="#" id="title">Online Charity store</a>
   
     <a href="#" id="pur">Purchase</a>
   

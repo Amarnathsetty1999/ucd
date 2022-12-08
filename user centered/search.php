@@ -3,7 +3,7 @@
 session_start();
 //$ste=$_GET['pi'];
 // $pno=$_POST['pp'];
-$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
 $search = $_POST['search'];
 
 $sql = "select * from products where name like '%$search%'";

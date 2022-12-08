@@ -8,13 +8,13 @@ if(!array_key_exists('email', $_COOKIE))
 
 
 
-$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
 $result=$pdo->query("select * from users where email='$email'"); 
 
 if(($row=$result->fetch()))
 {
     $name=$row['name'];
-    $pno=$row['phone'];
+
     // $addr=$row['adrs'];
     echo <<<END
     
@@ -41,7 +41,7 @@ if(($row=$result->fetch()))
 END;
 }
 $pdo=null;
-$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
 $result=$pdo->query("select * from orders where email='$email' order by dt desc");
 $n=0;
 while(($row=$result->fetch()))

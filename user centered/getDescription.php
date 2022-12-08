@@ -1,6 +1,6 @@
 <?php
 $pid=$_POST['pid'];
-$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
 $result=$pdo->query("select * from product where pid='$pid'"); 
 $pd="";
 if(($row=$result->fetch()))

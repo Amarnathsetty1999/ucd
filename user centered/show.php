@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <?php
 $cat=$_POST['cat'];
-$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
 $result=$pdo->query("select * from category,product where product.cid=category.cid and cname='$cat'"); 
 echo <<<END
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -96,7 +96,7 @@ while(($row=$result->fetch()))
   $pname=$row['pname'];
   $pdesc=$row['pdesc'];
   $cost=$row['price'];
-  $path="images/pp$pid.JPG";
+  $path="images/ucwe$pid.JPG";
 
   echo <<<END
 
