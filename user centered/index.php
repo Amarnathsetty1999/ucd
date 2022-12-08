@@ -76,8 +76,8 @@ $("#about").click(function()
 <body>
 
 <div class="navbar navbg" id="nav">
- 
-  <a class="navbar-brand bgs" href="#" id="title">Online Retail store</a>
+
+  <a class="navbar-brand bgs" href="#" id="title">Online charity store</a>
 
 
   <a href="#abt" id="abtus">About us</a>
@@ -151,7 +151,7 @@ $("#about").click(function()
 
 <div class="about-section" id="abt">
   <h1 style='overflow:hidden'>About Us</h1>
-  <p>Online retail store, is an Indian chain of hypermarkets in India founded 
+  <p>Online charity store, is operated by opus corporation 
       by Gowtham and co in the year 2021, with its first branch in shimoga.</p>
   <!-- <p>Resize the browser window to see that this page is responsive by the way.</p> -->
 </div>
