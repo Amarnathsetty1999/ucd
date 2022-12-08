@@ -35,7 +35,7 @@ padding: 10px!important;
 <script type="text/javascript">
     function setCookie(key, value, expiry) {
         var expires = new Date();
-        expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+        expires.setTime(expires.getTime() + (expiry *60*1000));
         document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
     }
 
@@ -53,6 +53,7 @@ padding: 10px!important;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+  
 $(document).ready(function(){ 
 
 
@@ -164,13 +165,13 @@ $("#ck").click(function()
   
     <a href="#" id="pur">Purchase</a>
   
-    <a href="index.php#abt">About us</a>
+   
   
     <a href="#" id="cart">Cart (<span id="s"></span>)</a>
 
     <a href="#" id="ck">Check out</a>
   
-    <a href="#" id="lo">Logout</a>
+
   
      <a href="#" id="about"><?php
   if(array_key_exists('email', $_COOKIE))
@@ -184,8 +185,8 @@ $("#ck").click(function()
   ?></a>
   
   </div>
-  
-<div id="rec" class="carousel">
+
+<div id="rec" >
 <div class="form-group" style=width:50%>
   <!-- <div class="col-lg-2"> -->
   <label for="sel1"> <h2> Select Product Category: </h2> </label>
@@ -196,6 +197,7 @@ $("#ck").click(function()
 </div>
 <div id="imp"></div>
 </div>
+
 </body>
 </html>
 

@@ -28,7 +28,9 @@ if(($row=$result->fetch()))
     <b>Phone :</b></td><td> $pno</td><br>
     </tr>
     <tr><td>
-    <b><a href="#" id="lo">Logout</a></td><br>
+
+    
+    <b><a href="logout.php" id="lo">Logout</a></td><br>
     </tr>
    
 
