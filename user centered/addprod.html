@@ -36,7 +36,9 @@ $(document).ready(function()  //web page is loaded
    pname=$("#pname").val();
    pdesc=$("#pdesc").val();
    cid=$("#cid").val();
-   $.post( "addproduct.php", { pid:pid,pname:pname,pdesc:pdesc,cid:cid }).done(function( data ) 
+   price=$("#price").val();
+
+   $.post( "addproduct.php", { pid:pid,pname:pname,pdesc:pdesc,cid:cid ,price:price}).done(function( data ) 
   { 
     alert(data);
    
@@ -81,6 +83,12 @@ $(document).ready(function()  //web page is loaded
    
         </span>
         </div>
+
+        <div class="wrap-input100 validate-input m-b-10">
+          <input class="input100" type="text" id="price" name="price" placeholder="Price">
+     
+          </span>
+          </div>
        
           <div class="container-login100-form-btn p-t-10">
                   <button class="login100-form-btn" type="button" id="add">
