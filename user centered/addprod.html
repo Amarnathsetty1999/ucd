@@ -38,7 +38,7 @@ $(document).ready(function()  //web page is loaded
    cid=$("#cid").val();
    price=$("#price").val();
 
-   $.post( "addproduct.php", { pid:pid,pname:pname,pdesc:pdesc,cid:cid ,price:price}).done(function( data ) 
+   $.post( "addproducts.php", { pid:pid,pname:pname,pdesc:pdesc,cid:cid ,price:price}).done(function( data ) 
   { 
     alert(data);
    
