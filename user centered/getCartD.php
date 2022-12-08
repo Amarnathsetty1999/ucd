@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
 
 $tot=0;
 $cnt=0;

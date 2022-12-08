@@ -11,7 +11,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Retail Store</title>
+	<title>Charity Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,11 +118,11 @@ $("#lo").click(function()
 
  <div id="navbar navbar-expand-lg navbar-dark bg-dark static-top">
  <a class="navbar-brand" href="#">
-      <img src="images/trt.png" alt="..." height="36">
+      <img src="images/logo02.png" alt="..." height="36">
     </a> 
 
 </div> 
-  <a class="navbar-brand bgs" href="#" id="title">Online Retail store</a>
+  <a class="navbar-brand bgs" href="#" id="title">Online Charity store</a>
 
   <a href="#" id="pur">Purchase</a>
 

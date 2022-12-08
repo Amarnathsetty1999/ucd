@@ -2,7 +2,7 @@
 session_start();
 date_default_timezone_set("Asia/Calcutta");
 $email=$_POST['email'];
-$pdo=new PDO("mysql:host=localhost;dbname=test","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
 
 $tot=0;
 
