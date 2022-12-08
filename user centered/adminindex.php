@@ -11,7 +11,7 @@ if($_SESSION['status']!="Active")
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mellodian Park</title>
+	<title>Online Charity Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -102,6 +102,7 @@ $("#lo").click(function()
 
   <a href="#" id="order">ALL ORDERS</a>
   <a href="#" id="user">ALL Customers</a>
+  <a href="addprod.html" id="prod">Add products</a>
   <a href="#" id="lo">Logout</a>
   
 </div>
