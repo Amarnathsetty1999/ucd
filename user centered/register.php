@@ -3,6 +3,7 @@ $email=$_POST['email'];
 $psw=$_POST['psw'];
 $name=$_POST['name'];
 $pno=$_POST['pno'];
+$me=$pno;
 
 $pdo=new PDO("mysql:host=localhost;dbname=online_charity_store","root","");
 $result=$pdo->query("select * from users where email='$email'"); 
@@ -25,7 +26,7 @@ else
 {
   $salt = "7sf7a889x".$psw."di9aj2";
   $hashed = hash('sha512', $salt);
-$sql="INSERT into users values('$email','$hashed','$name','$pno')";
+$sql="INSERT into users values('$email','$hashed','$name','$me')";
 $result=$pdo->exec($sql);
 echo "Registered successfully";
 $pdo=null;

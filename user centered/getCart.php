@@ -8,7 +8,9 @@ $tot=0;
 
 if(!array_key_exists('email', $_COOKIE))
 {
-    echo "Please login before Purchasing" ;
+    echo "Please login before Purchasing";
+	header("location:login.html");
+	
     
 }
 

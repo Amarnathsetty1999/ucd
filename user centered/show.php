@@ -45,7 +45,18 @@ $(".bb").click(function()
    pid=this.id;
   $.post( "purchase.php", {pid:pid,email:email }).done(function( data ) 
     { 
-       alert(data);
+
+      if(data.localeCompare("Please login before Purchasing")==0)
+      {
+        alert(data);
+        location.replace('login.html');
+
+      }
+      else
+      {
+        alert(data);
+      }
+       
     });
 
 });
@@ -119,7 +130,7 @@ while(($row=$result->fetch()))
       <p><strong> Cost: </strong>&#163; $cost </p>
       <div><button class=bb type=button id=$pid> Buy </button>
       <button class=ss type=button id="p$pid"> Add to Cart </button>
-      <button class=rm type=button id="p$pid"> Remove from Cart </button></div>
+      <button class=rm type=button id=" p$pid"> Remove from Cart </button></div>
     </div>
     <br>
   </div>

@@ -26,7 +26,7 @@ session_start();
 <script type="text/javascript">
     function setCookie(key, value, expiry) {
         var expires = new Date();
-        expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+        expires.setTime(expires.getTime() + (expiry *60*1000));
         document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
     }
 
@@ -51,10 +51,7 @@ $("#title").click(function()
    location.replace('index.php');
 });
 
-$("#pur").click(function()
-{
-  location.replace('pur.php');
-});
+
 
 // $("#abtus").click(function()
 // {
@@ -71,43 +68,7 @@ $("#about").click(function()
     });
 });
 
-$("#cart").click(function()
-{
-  email=getCookie('email');
-  
-  $.post( "getCartD.php", {email:email }).done(function( data ) 
-    { 
-       $("#me").html(data);
-    });
 
-  $.post( "getCountCart.php", {email:email }).done(function( data ) 
-    { 
-       $("#s").html(data);
-    });
-
-});
-
-$("#ck").click(function()
-{
-  email=getCookie('email');
-  
-  $.post( "getCart.php", {email:email  }).done(function( data ) 
-    { 
-       $("#me").html(data);
-    });
-
-});
-
-$("#lo").click(function()
-{
-  email=getCookie('email');
-  eraseCookie('email');
-
-  $.post( "logout.php", {email:email }).done(function( data ) 
-    { 
-       location.replace('index.php');
-    });
-});
 
 });
 </script>
@@ -115,24 +76,11 @@ $("#lo").click(function()
 <body>
 
 <div class="navbar navbg" id="nav">
+ 
+  <a class="navbar-brand bgs" href="#" id="title">Online Retail store</a>
 
- <div id="navbar navbar-expand-lg navbar-dark bg-dark static-top">
- <a class="navbar-brand" href="#">
-      <img src="images/logo02.png" alt="..." height="36">
-    </a> 
-
-</div> 
-  <a class="navbar-brand bgs" href="#" id="title">Online Charity store</a>
-
-  <a href="#" id="pur">Purchase</a>
 
   <a href="#abt" id="abtus">About us</a>
-
-  <a href="#" id="cart">Cart(<span id="s"></span>)<i class="fa fa-shopping-cart"></i></a>
-
-  <a href="#" id="ck">Check out</a>
-
-  <a href="#" id="lo">Logout</a>
 
   <a href="#" id="about"><?php
   if(array_key_exists('email', $_COOKIE))
@@ -148,14 +96,111 @@ $("#lo").click(function()
 </div>
 
 <div id="me">
-<div id="rec"><?php include('home.html'); ?></div>
-<div class="about-section" id="abt">
+<div id="rec"><?php include('home.html'); ?>
 
- 
-  <p><a href="#" id="pur">Purchase</a></p>
+<div class="container-fluid mt-0">
+  <div class="row">
+    <div class="col-md-4 p-3  text-white">
+    <div class="container-fluid mt-3">
+    <div class="card" style="width:350px">
+    <img class="card-img-top" src="images/pic2.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="pur.php" class="btn btn-primary">Explore Category</a>
+    </div>
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+
+     <div class="col-md-4 p-3  text-white">
+
+    <div class="container-fluid mt-3">
+    <div class="card" style="width:350px">
+    <img class="card-img-top" src="images/pic1.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="pur.php" class="btn btn-primary">Explore Category</a>
+    </div>
+  </div>
+    </div>
+  </div>
+
+
+
+    <div class="col-md-4 p-3  text-white">
+    <div class="container-fluid mt-3">
+    <div class="card" style="width:350px">
+    <img class="card-img-top" src="images/pic3.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="pur.php" class="btn btn-primary">Explore Category</a>
+    </div>
+  </div>
+    </div>
+  </div>  
+  </div>
+</div>
+
+<div class="about-section" id="abt">
+  <h1 style='overflow:hidden'>About Us</h1>
+  <p>Online retail store, is an Indian chain of hypermarkets in India founded 
+      by Gowtham and co in the year 2021, with its first branch in shimoga.</p>
   <!-- <p>Resize the browser window to see that this page is responsive by the way.</p> -->
+</div>
+
+<h2 style="text-align:center; margin-top:20px;overflow:hidden">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/w3images/team1.jpg" alt="Jane" style="width:100%"> -->
+      <div class="container">
+        <h2 style='overflow:hidden'>Gowtham S</h2>
+        <p class="title">CEO & Founder</p>
+        <p>7338313997</p>
+        <p>gowthamsgs2016@gmail.com</p>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" id="ex">
+      <!-- <img src="/w3images/team2.jpg" alt="Mike" style="width:100%"> -->
+      <div class="container">
+        <h2 style='overflow:hidden'>Subhan Shariff</h2>
+        <p class="title"> Co-founder </p>
+        <p>9739671126</p>
+        <p>subhansha063@gmail.com</p>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="container">
+        <h2 style='overflow:hidden'>Bharath K G</h2>
+        <p class="title">Developer</p>
+        <p> 8618415646</p>
+        <p>bharathkg99@gmail.com</p>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
